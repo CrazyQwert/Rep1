@@ -11,6 +11,7 @@ public class MainClass {
 		result = x + y;
 		
 		System.out.println(result);
+		System.out.println("Work, you dumb bitch!");
 	}
 
 }
