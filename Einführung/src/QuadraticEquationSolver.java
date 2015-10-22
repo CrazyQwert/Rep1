@@ -14,6 +14,8 @@ public class QuadraticEquationSolver {
 		double variableB;
 		double variableC;
 		
+		double determinant;
+		
 		double solution1;
 		double solution2;
 		
@@ -35,17 +37,24 @@ public class QuadraticEquationSolver {
 		userInput = tempInput.readLine();
 		variableC = Integer.parseInt(userInput);
 		
-		//calculating solution
-		solution1 = ( -variableB + (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
-		solution2 = ( -variableB - (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
+		//calculate determinant to see if problem can be solved
+		determinant = variableB * variableB - 4 * variableA * variableC;
 		
-		//check whether there is only one solution to this equation
-		if( solution1 != solution2 ) {
+		//check how many solutions there are
+		if( determinant < 0 ) {
+			System.out.println("There is no solution to your quadratic equation!");
+		} else if( determinant > 0 ) {
+			//calculating solution
+			solution1 = ( -variableB + (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
+			solution2 = ( -variableB - (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
+			//Output
 			System.out.println("The solution is { " + solution1 + " ; " + solution2 + " }");
 		} else {
+			solution1 = ( -variableB + (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
+			//Output
 			System.out.println("The solution is { " + solution1 + " }");
 		}
-		
+				
 		Thread.sleep(2500);
 		System.out.println("This better be right :S");
 		
