@@ -5,8 +5,7 @@ class Aufgabe2 {
 	public static void main(String[] args)
 	throws java.io.IOException, InterruptedException
 	{
-		BufferedReader tastatur = new BufferedReader(
-				new InputStreamReader(System.in));
+		BufferedReader tastatur = new BufferedReader(new InputStreamReader(System.in));
 		String eingabe;
 		int zahl1;
 		int zahl2;

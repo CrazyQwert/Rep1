@@ -41,7 +41,7 @@ public class QuadraticEquationSolver {
 		
 		//check whether there is only one solution to this equation
 		if( solution1 != solution2 ) {
-			System.out.println("The solution is { " + solution1 + " ; " + solution2 + "}");
+			System.out.println("The solution is { " + solution1 + " ; " + solution2 + " }");
 		} else {
 			System.out.println("The solution is { " + solution1 + " }");
 		}
