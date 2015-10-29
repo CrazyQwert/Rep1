@@ -17,7 +17,7 @@ public class SquareAndTriangle {
 		userinput = tempInput.readLine();
 		triangleWidth = Integer.parseInt(userinput);
 		
-		//System.out.println(triangleWidth);
+		System.out.println();
 		
 		//repeating steps for the width of the triangle
 		for(int i = triangleWidth; i > 0; i--) {
@@ -69,12 +69,12 @@ public class SquareAndTriangle {
 		for(int i = triangleWidth; i > 0; i--) {
 		
 			
-			for( int x = count2; x < triangleWidth + 1; x++ ) {
-				System.out.print(".");
+			for( int x = count2; x < triangleWidth; x++ ) {
+				System.out.print(" ");
 			}
 			count2--;
 			
-			for(int x = i + 1; x >= 0; x--) {
+			for(int x = i; x > 0; x--) {
 				System.out.print("x");
 			}
 			System.out.println();
