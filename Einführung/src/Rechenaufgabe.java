@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-class Aufgabe2 {
+class Rechenaufgabe {
 	public static void main(String[] args)
 	throws java.io.IOException, InterruptedException
 	{
