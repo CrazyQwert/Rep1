@@ -64,7 +64,12 @@ class Aufgabe2 {
 		} else if( auswahl == 2 ){
 			ergebnis = zahl1 - zahl2;			
 		} else if( auswahl == 3 ) {
-			ergebnis = zahl1 * zahl2;
+			System.out.print("Geben Sie noch eine dritte Zahl ein: ");
+			eingabe = tastatur.readLine();
+			// converts entered string to an integer and saves it 
+			int zahl3 = Integer.parseInt(eingabe);
+			
+			ergebnis = zahl1 * zahl2 * zahl3;
 		} else {
 			ergebnis = zahl1 / zahl2;
 		}
