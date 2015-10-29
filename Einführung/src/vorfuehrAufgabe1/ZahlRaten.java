@@ -1,3 +1,4 @@
+package vorfuehrAufgabe1;
 //
 //Zahlraten.java
 //Programexample for guessing numbers between 1 and 100
