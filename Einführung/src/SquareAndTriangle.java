@@ -20,9 +20,9 @@ public class SquareAndTriangle {
 		//System.out.println(triangleWidth);
 		
 		//repeating steps for the width of the triangle
-		for(int i = triangleWidth; i >= 0; i--) {
+		for(int i = triangleWidth; i > 0; i--) {
 			//printing "x" for the triangle width. Decreases with each step.
-			for(int x = i; x >= 0; x--) {
+			for(int x = i; x > 0; x--) {
 				System.out.print("x");
 			}
 			System.out.println();
@@ -30,8 +30,9 @@ public class SquareAndTriangle {
 		
 		System.out.println();
 		
+		
 		int count = 0;
-		for(int i = triangleWidth; i >= 0; i--) {
+		for(int i = triangleWidth; i > 0; i--) {
 		
 			for(int w = 0; w <= count; w++) {
 				System.out.print("x");
@@ -46,9 +47,9 @@ public class SquareAndTriangle {
 		int count1 = 0;
 		
 		//repeating steps for the width of the triangle
-		for(int i = triangleWidth; i >= 0; i--) {
+		for(int i = triangleWidth; i > 0; i--) {
 			//printing "x" for the triangle width. Decreases with each step.
-			for(int x = i - 1; x >= 0; x--) {
+			for(int x = i - 1; x > 0; x--) {
 				System.out.print(" ");
 			}
 			System.out.print("x");
@@ -56,6 +57,26 @@ public class SquareAndTriangle {
 				System.out.print("x");
 			}
 			count1++;
+			System.out.println();
+		}
+		
+		System.out.println();
+		
+		//count1 has to be outside the for loop so it is not constantly set to 0
+		int count2 = triangleWidth;
+		
+		//repeating steps for the width of the triangle
+		for(int i = triangleWidth; i > 0; i--) {
+		
+			
+			for( int x = count2; x < triangleWidth + 1; x++ ) {
+				System.out.print(".");
+			}
+			count2--;
+			
+			for(int x = i + 1; x >= 0; x--) {
+				System.out.print("x");
+			}
 			System.out.println();
 		}
 		
