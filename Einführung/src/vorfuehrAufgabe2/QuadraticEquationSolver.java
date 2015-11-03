@@ -41,6 +41,9 @@ public class QuadraticEquationSolver {
 		//calculate discriminant to see if problem can be solved
 		discriminant = variableB * variableB - 4 * variableA * variableC;
 		
+		//spacer
+		System.out.println();
+		
 		//if variableA is 0, the solution is not quadratic anymore since ax^2 = 0
 		if( variableA != 0 ){
 			//check how many solutions there are for a quadratic equation
@@ -50,15 +53,19 @@ public class QuadraticEquationSolver {
 				//calculating solution
 				solution1 = ( -variableB + (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
 				solution2 = ( -variableB - (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
-				//Output
-				System.out.println("The solution is { " + solution1 + " ; " + solution2 + " }");
+				//bring solutions in correct order
+				if( solution1 > solution2 ) {
+					System.out.println("The solution is { " + solution2 + " ; " + solution1 + " }");
+				} else {
+					System.out.println("The solution is { " + solution1 + " ; " + solution2 + " }");
+				}
 			} else {
 				solution1 = ( -variableB + (Math.sqrt( variableB * variableB - 4 * variableA * variableC ))) / ( 2 * variableA );
 				//Output
 				System.out.println("The solution is { " + solution1 + " }");
 			}
 		} else {
-			//check whether b is 0. If b is 0, the solution is c
+			//check whether b is 0. If b is 0, the solution is the null set
 			if( variableB != 0 ) {
 				System.out.println("This is not a quadratic equation, but a linear one!");
 				Thread.sleep(1000);
@@ -66,13 +73,13 @@ public class QuadraticEquationSolver {
 				solution1 = -variableC / variableB;
 				System.out.println("The solution is { " + solution1 + " }");
 			} else {
-				System.out.println("The solution is { " + variableC + " }");
+				System.out.println("The solution is { }");
 			}
 		}
-				
+		
+		System.out.println();
 		Thread.sleep(2500);
 		System.out.println("This better be right :S");
-		
 	
 	}
 
