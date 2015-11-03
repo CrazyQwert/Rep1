@@ -27,7 +27,8 @@ public class letterSquare {
 			
 			//Retrieving and saving character square consists of
 			System.out.print("Now choose a character of your liking that will be used to draw the square: ");
-			character = (char) System.in.read();
+			userinput = tempinput.readLine();
+			character = userinput.charAt(0);
 			
 			//Spacer
 			System.out.println();
@@ -44,9 +45,13 @@ public class letterSquare {
 			//Exit prompt
 			System.out.println();
 			System.out.print("Do you want to exit? (y/n): ");
-			exit = (char) System.in.read();
+			userinput = tempinput.readLine();
+			exit = userinput.charAt(0);
 			
-			System.out.println(exit);
+			//Spacer
+			System.out.println();
+			System.out.println("------------");
+			System.out.println();
 			
 		} while( exit != 'y');
 	}
