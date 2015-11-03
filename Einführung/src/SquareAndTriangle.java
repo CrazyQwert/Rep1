@@ -28,8 +28,8 @@ public class SquareAndTriangle {
 			System.out.println();
 		}
 		
+		//Spacer
 		System.out.println();
-		
 		
 		int count = 0;
 		for(int i = triangleWidth; i > 0; i--) {
@@ -41,6 +41,7 @@ public class SquareAndTriangle {
 			count++;
 		}
 		
+		//Spacer
 		System.out.println();
 		
 		//count1 has to be outside the for loop so it is not constantly set to 0
@@ -60,9 +61,10 @@ public class SquareAndTriangle {
 			System.out.println();
 		}
 		
+		//Spacer
 		System.out.println();
 		
-		//count1 has to be outside the for loop so it is not constantly set to 0
+		//count2 has to be outside the for loop so it is not constantly set to 0
 		int count2 = triangleWidth;
 		
 		//repeating steps for the width of the triangle
