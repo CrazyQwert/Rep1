@@ -1,7 +1,8 @@
+package vorfuehrAufgabe3;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class SquareAndTriangle {
+public class Triangles {
 	
 	public static void main (String args[]) 
 			throws java.io.IOException {
