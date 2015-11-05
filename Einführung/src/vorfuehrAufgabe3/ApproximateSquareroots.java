@@ -8,32 +8,34 @@ public class ApproximateSquareroots {
 	public static void main(String[] args) throws java.io.IOException {
 		
 		BufferedReader tempinput = new BufferedReader( new InputStreamReader(System.in) );
-		String eingabe;
 
-		System.out.println("Wurzelziehen durch geschicktes Raten");
-		System.out.println();
-		double a; // Eingegebene Zahl, woraus wir Wurzel ziehen wollen
-
-		System.out.print("Gib positive Zahl: ");
-		eingabe = tempinput.readLine();
-		a = Double.parseDouble(eingabe);
-
-		double square = a;
-		double lower = 0; //
-		double upper = a;
-		double root = ( upper + lower ) / 2;//
+		double square; //User defined number of which the square root shall be approximated
+		//Let user select a positive Number
+		System.out.print("Please enter a positive Number of which the squareroot shall be approximated: ");
+		square = Double.parseDouble(tempinput.readLine());
+		
+		double lower = 0;
+		double upper = square;
+		double root = ( upper + lower ) / 2;
 		double delta = root * root - square;
-		int i = 1;
+		
+		//Program introduction
+		System.out.println("Root extraction by systematic guessing.");
+		System.out.println();
+
+		
+		int i = 1;	//Variable to measure the amount of steps needed to approximate the square root
+		
 		while ( Math.abs(delta) > 0.001 ) {
 
-			root = (upper + lower) / 2; // neue root-Wert
+			root = (upper + lower) / 2;
 			delta = root * root - square;
-			if (delta > 0) {
+			if(delta > 0) {
 				upper = root;
-			} else if (delta < 0) {
+			} else if(delta < 0) {
 				lower = root;
 			} else {
-				System.out.println("Die Wurzel von " + a + " ist " + root);
+				System.out.println("Die Wurzel von " + square + " ist " + root);
 			}
 			System.out.println("Durchlauf " + i + " : root= " 
 					+ root
@@ -42,7 +44,7 @@ public class ApproximateSquareroots {
 					+ upper);
 			i++;
 		}
-		System.out.println("Die Wurzel von " + a + " ist " + root);
+		System.out.println("Die Wurzel von " + square + " ist " + root);
 	}
 
 }
