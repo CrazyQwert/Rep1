@@ -20,6 +20,13 @@ public class Triangles {
 		
 		System.out.println();
 		
+		
+		/*
+		 * x x x
+		 * x x
+		 * x
+		 */
+		
 		//repeating steps for the width of the triangle
 		for(int i = triangleWidth; i > 0; i--) {
 			//printing "x" for the triangle width. Decreases with each step.
@@ -31,6 +38,13 @@ public class Triangles {
 		
 		//Spacer
 		System.out.println();
+		
+		
+		/*
+		 * x
+		 * x x
+		 * x x x
+		 */
 		
 		int count = 0;
 		for(int i = triangleWidth; i > 0; i--) {
@@ -44,6 +58,13 @@ public class Triangles {
 		
 		//Spacer
 		System.out.println();
+		
+		
+		/*
+		 *     x
+		 *   x x
+		 * x x x     
+		 */
 		
 		//count1 has to be outside the for loop so it is not constantly set to 0
 		int count1 = 0;
@@ -64,6 +85,13 @@ public class Triangles {
 		
 		//Spacer
 		System.out.println();
+		
+		
+		/*
+		 * x x x
+		 *   x x
+		 *     x
+		 */
 		
 		//count2 has to be outside the for loop so it is not constantly set to 0
 		int count2 = triangleWidth;
