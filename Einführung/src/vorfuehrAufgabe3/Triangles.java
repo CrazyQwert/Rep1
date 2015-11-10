@@ -4,8 +4,7 @@ import java.io.InputStreamReader;
 
 public class Triangles {
 	
-	public static void main (String args[]) 
-			throws java.io.IOException {
+	public static void main (String args[]) throws java.io.IOException {
 		
 		//Declaration of variables
 		BufferedReader tempInput = new BufferedReader(new InputStreamReader(System.in));
