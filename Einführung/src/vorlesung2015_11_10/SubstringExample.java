@@ -24,7 +24,7 @@ public class SubstringExample {
 		
 		//System.out.println(s.substring(-3.3));	//compiler error
 		
-		/*if( s.substring(1,2) == s.charAt(1) ) {
+		/*if( s.substring(1,2) == s.charAt(1) ) {	//compiler error: different data types
 			
 		}*/
 	}
