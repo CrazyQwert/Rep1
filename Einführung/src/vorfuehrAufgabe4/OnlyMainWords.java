@@ -17,7 +17,6 @@ public class OnlyMainWords {
 		//Fetching user input
 		System.out.println("Please enter a sentence:");
 		sentence = tempinput.readLine();
-		int test = sentence.length();
 		
 		for( int i = 0; i < sentence.length(); ++i ) {
 			if( Character.isUpperCase(sentence.charAt(i)) ) {
