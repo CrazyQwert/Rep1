@@ -26,25 +26,25 @@ public class ApproximateSquareroots {
 		
 		int i = 1;	//Variable to measure the amount of steps needed to approximate the square root
 		
+		//Checks whether the absolute of Delta is bigger than 0.001 so we don't need to check for positives and negatives separately
 		while ( Math.abs(delta) > 0.001 ) {
-
-			root = (upper + lower) / 2;
-			delta = root * root - square;
-			if(delta > 0) {
+			root = (upper + lower) / 2;	//Approximation
+			delta = root * root - square;	//Calculating delta by subtracting the entered number from our approximated solution
+			if(delta > 0) {	//Adjusts the lower and upper boundaries accordingly
 				upper = root;
 			} else if(delta < 0) {
 				lower = root;
 			} else {
-				System.out.println("Die Wurzel von " + square + " ist " + root);
+				System.out.println("The root of " + square + " is " + root);
 			}
-			System.out.println("Durchlauf " + i + " : root= " 
-					+ root
-					+ " 	delta= " + delta + " 	lower= " 
-					+ lower + " 		upper= "
-					+ upper);
-			i++;
+			System.out.println("Run " + i + " : "
+					+ "root = " + root + "	"
+					+ "delta = " + delta + "	"
+					+ "lower = " + lower + " 	"
+					+ "upper= " + upper);
+			i++;	//Increase the number of steps
 		}
-		System.out.println("Die Wurzel von " + square + " ist " + root);
+		System.out.println("The root of " + square + " is " + root);
 	}
 
 }
