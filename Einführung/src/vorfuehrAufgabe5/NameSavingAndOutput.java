@@ -60,7 +60,7 @@ public class NameSavingAndOutput {
 			System.out.println("You entered: " + nameList[arrayCount]);
 			
 			//Checking whether user wants to end input-phase
-			if( nameList[arrayCount] == "-end-" ) {
+			if( nameList[arrayCount] == "a" ) {
 				//deletes last input after end-command so that it does not count towards being a name
 				nameList[arrayCount] = null;
 				break;
