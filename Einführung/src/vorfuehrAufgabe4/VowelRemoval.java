@@ -27,7 +27,7 @@ public class VowelRemoval {
 		 */
 		for( int i = 0; i <= input.length() - 1; ++i) {
 			if( inputLowerCase.charAt(i) == 'a') {
-
+				continue;
 			} else if( inputLowerCase.charAt(i) == 'e') {
 				continue;
 			} else if( inputLowerCase.charAt(i) == 'i') {

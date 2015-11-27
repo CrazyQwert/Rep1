@@ -19,17 +19,17 @@ public class OnlyMainWords {
 		sentence = tempinput.readLine();
 		
 		for( int i = 0; i < sentence.length(); ++i ) {
-			if( Character.isUpperCase(sentence.charAt(i)) ) {
-				while( Character.isAlphabetic(sentence.charAt(i)) ) {
+			if( Character.isUpperCase(sentence.charAt(i)) ) {	//Checks whether a character is in capitals or not
+				while( Character.isAlphabetic(sentence.charAt(i)) ) {	//Continues for as long as there are alphabetic characters (no blanks)
 					System.out.print( sentence.charAt(i) );
 					++i;
 					
-					if( i > sentence.length() - 1 ) {
+					if( i > sentence.length() - 1 ) {	//Fail-safe to prevent "out of range" error
 						i = sentence.length();
 						break;
 					}
 				}
-				System.out.println();
+				System.out.println();	//Linebreak to ensure every word is in its own line
 			
 			}
 		}
