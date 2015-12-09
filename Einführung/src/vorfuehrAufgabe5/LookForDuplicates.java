@@ -39,9 +39,8 @@ public class LookForDuplicates {
 		
 		//Output
 		for( int i = 0; i < placesOfInterest.length; ++i ) {
-			int count = i + 1;	//List-Number
 			//Formatted output of index and item
-			System.out.printf("%2d) " + placesOfInterest[i] + "\n", count );
+			System.out.printf("%2d) " + placesOfInterest[i] + "\n", (i + 1) );
 		}
 		
 		System.out.println();	//Spacer
@@ -81,7 +80,7 @@ public class LookForDuplicates {
 			if (notYetMentioned) {
 				//following for-loop checks how many duplicates there are if any
 				for (int x = 0; x < placesOfInterest.length; ++x) {
-					//if something is listed mulitiple, duplicate will increase accordingly
+					//if something is listed multiple, duplicate will increase accordingly
 					if (placesOfInterest[i].equals(placesOfInterest[x])) {
 						++duplicate;
 						//saves index of duplicate to array "indices"
