@@ -9,7 +9,7 @@ public class L33tTranscription {
 		
 		//Initialisation
 		BufferedReader tempinput = new BufferedReader( new InputStreamReader(System.in) );
-		String transcriptionList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?, ";
+		String transcriptionList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!?, .";
 		String[] leetTable = {
 				"4", "8", "©",	//A, B, C
 				"Ð", "3", "ƒ",	//D, E, F
@@ -24,6 +24,7 @@ public class L33tTranscription {
 				"¿",	//?
 				",",	//,
 				" ",	//Space
+				".",
 				"<?>"	//Character not recognised
 		};
 		boolean cont = true;
