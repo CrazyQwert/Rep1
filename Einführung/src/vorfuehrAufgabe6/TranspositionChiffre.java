@@ -17,7 +17,12 @@ public class TranspositionChiffre {
 		 System.out.println("Text einfuellen in Matrix ...");    
 		 m = stringToMatrix(s, n);    
 		 System.out.println("Matrix mit originalem Text:");    
-		 printMatrix(m);    
+		 printMatrix(m);
+		 
+		 t = matrixToString(m);    
+		 System.out.println("Text, verschlüsselt: " + t);
+		 System.out.println(t.length());
+		 
 		 System.out.println("Matrix transponieren ...");    
 		 m = transposeMatrix(m);    
 		 System.out.println("Matrix mit gespiegeltem Text:");
@@ -42,18 +47,18 @@ public class TranspositionChiffre {
 	 public static char[][] stringToMatrix( String str, int size ) {
 		char[][] matrix = new char[size][size];
 		
-		if( str.length() > Math.pow(size, 2) ) {
+		if (str.length() > Math.pow(size, 2)) {
 			str.substring(0, (int)Math.pow(size, 2) - 1);	//String getting cut off
 		} else {
 			int tooShort = (int)Math.pow(size, 2) - str.length();	//Calculating missing characters
-			for( int i = tooShort; i > 0; i-- ) {
+			for (int i = tooShort; i > 0; i--) {
 				str = str + ".";	//Adding dots
 			}
 		}
 		
 		int strIndex = 0;
-		for( int i = 0; i < matrix.length; i++ ) {
-			for( int x = 0; x < matrix[0].length; x++ ) {
+		for (int i = 0; i < matrix.length; i++) {
+			for (int x = 0; x < matrix[0].length; x++) {
 				matrix[i][x] = str.charAt(strIndex);	//Writing String index
 				strIndex++;
 			}
@@ -71,9 +76,9 @@ public class TranspositionChiffre {
 	 */
 	public static void printMatrix(char[][] matrix) {
 		 
-		for( int i = 0; i < matrix.length; i++ ) {
-			for( int x = 0; x < matrix[0].length; x++ ) {
-				System.out.print(matrix[i][x] + " ");
+		for (int i = 0; i < matrix.length; i++) {
+			for (int x = 0; x < matrix[0].length; x++) {
+				System.out.print(matrix[x][i] + " ");
 			}
 			System.out.println();
 		}
@@ -86,9 +91,9 @@ public class TranspositionChiffre {
 		char[][] arrayClone = new char[matrix.length][matrix[0].length];
 
 		
-		for (int i = 0; i < matrix.length; i++) {
-			for (int x = 0; x < matrix[0].length; x++) {
-				arrayClone[matrix.length - 1 - x][matrix[0].length - 1 - i] = matrix[i][x];
+		for (int x = 0; x < matrix.length; x++) {
+			for (int i = 0; i < matrix[0].length; i++) {
+				arrayClone[matrix.length - 1 - i][matrix.length - 1 - x] = matrix[x][i];
 			}
 		}
 		
@@ -103,8 +108,8 @@ public class TranspositionChiffre {
 		String output;
 
 		output = String.valueOf(matrix[0][0]);
-		for( int i = 0; i < matrix.length; i++ ) {
-			for( int x = 0; x < matrix[0].length; x++ ) {
+		for (int i = 0; i < matrix.length; i++) {
+			for (int x = 0; x < matrix[0].length; x++) {
 				output = output + matrix[i][x];
 			}
 		}
