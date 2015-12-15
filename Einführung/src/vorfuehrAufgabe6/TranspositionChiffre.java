@@ -7,7 +7,7 @@ public class TranspositionChiffre {
 		 String txt2 = "In paradise city all girls are pretty.";    
 		 String txt3 = "Ene mene mu - und raus bist DU!";    
 		 String txt4 = "FtS..uh...ce...k ... U";
-		 String txt5 = "test";
+		 String txt5 = "blblbl";
 		 String s = txt4; // change s for testing purposes 
 		 System.out.println(s.length());
 		 String t;    
@@ -19,7 +19,7 @@ public class TranspositionChiffre {
 		 System.out.println("Matrix mit originalem Text:");    
 		 printMatrix(m);
 		 
-		 t = matrixToString(m);    
+		 t = matrixToString(m);
 		 System.out.println("Text, verschlüsselt: " + t);
 		 System.out.println(t.length());
 		 
@@ -30,7 +30,7 @@ public class TranspositionChiffre {
 		 System.out.println();
 		 printMatrix(transposeMatrix(m));
 		 System.out.println("Text aus Matrix extrahieren ...");    
-		 t = matrixToString(m);    
+		 t = matrixToString(m);
 		 System.out.println("Text, verschlüsselt: " + t);  
 		 
 	 } // end main
@@ -108,7 +108,7 @@ public class TranspositionChiffre {
 		String output;
 
 		output = String.valueOf(matrix[0][0]);
-		for (int i = 0; i < matrix.length; i++) {
+		for (int i = 1; i < matrix.length; i++) {
 			for (int x = 0; x < matrix[0].length; x++) {
 				output = output + matrix[i][x];
 			}
