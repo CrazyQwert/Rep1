@@ -8,21 +8,22 @@ public class TranspositionChiffre {
 		 String txt3 = "Ene mene mu - und raus bist DU!";    
 		 String txt4 = "FtS..uh...ce...k ... U";
 		 String txt5 = "Irey na  g dcaipiilrastll";
-		 String s = txt5; // change s for testing purposes 
+		 String s = txt5; // change s for testing purposes
 		 String t;    
 		 char[][] m; // Matrix with characters   
-		 int n = 5; // Size of matrix, change to your liking    
+		 int n = 5; // Size of matrix, change to your liking  
+		 
 		 System.out.println("Text, original: " + s);    
 		 System.out.println("Text einfuellen in Matrix ...");    
 		 m = stringToMatrix(s, n);    
 		 System.out.println("Matrix mit originalem Text:");    
-		 printMatrix(m);		 
+		 printMatrix(m);
 		 System.out.println("Matrix transponieren ...");    
 		 m = transposeMatrix(m);    
 		 System.out.println("Matrix mit gespiegeltem Text:");
 		 printMatrix(m);
 		 System.out.println("Text aus Matrix extrahieren ...");    
-		 t = matrixToString(m);    
+		 t = matrixToString(m);
 		 System.out.println("Text, verschlüsselt: " + t);  
 		 
 	 } // end main
