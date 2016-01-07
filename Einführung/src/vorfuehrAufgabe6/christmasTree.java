@@ -27,7 +27,7 @@ public class christmasTree {
 	 * @param branches	number of branches
 	 */
 	public static void tree(int branches) {
-		for (int i = 0; i < branches; i++) {
+		for (int i = 0; i <= branches; i++) {
 			spacing(branches - i);
 			branch(i);
 			System.out.println();
