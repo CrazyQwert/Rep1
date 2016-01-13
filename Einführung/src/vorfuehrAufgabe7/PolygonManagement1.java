@@ -29,12 +29,26 @@ public class PolygonManagement1 {
 		System.out.println(calcCircumference(triangle1));
 	}
 	
+	/**
+	 * calculates the distance between two points a and b within 
+	 * a Cartesian coordinate system
+	 * @param a	first point
+	 * @param b	second point
+	 * @return	distance
+	 */
 	static double calcDistance(Point a, Point b) {
 		double distance = Math.sqrt(Math.pow((b.x - a.x), 2) 
 				+ Math.pow((b.y - a.y), 2));
 		return distance;
 	}
 
+	/**
+	 * calculates the circumference of a polygon with a custom amount
+	 * of points specified within the points-array of the polygon-class using
+	 * calcDistance.
+	 * @param polygon	polygon of which the circumference is to be calculated
+	 * @return	circumference
+	 */
 	static double calcCircumference(Polygon polygon) {
 		double circumference = 0;
 		for (int i = 0; i < polygon.points.length; i++) {
